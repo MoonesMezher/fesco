@@ -1,0 +1,76 @@
+/* Start Media */
+@media (max-width: 600px) {
+    section,
+    footer {
+        padding: 80px 16px;
+    }
+    header .container {
+        font-size: .9rem;
+    }
+}
+@media (max-width: 480px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    header {
+        background-color: #7ac147;
+    }
+}
+@media (max-width: 370px) {
+    header ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    header li:hover:before {
+        opacity: 0;
+    }
+}
+@media (max-width: 767px) {
+    .home .description {
+        flex-basis: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .about .discreption .contact {
+        width: 100%;
+    }
+    .about .discreption .image {
+        display: none;
+    }
+}
+@media (max-width: 1024px) {
+    .about {
+        padding-bottom: 80px;
+        margin-bottom: 0;
+    }
+    .about .container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .about .discreption {
+        flex-direction: row-reverse;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 990px) {
+    .pizza .contain,
+    .dessert .contain {
+        flex-direction: column;
+    } 
+}
+@media (min-width: 767px) {
+    footer .address,
+    footer .social,
+    footer .opining-hours {
+        flex-basis: 44%;
+    }
+}
+@media (min-width: 1024px) {
+    footer .address,
+    footer .social,
+    footer .opining-hours {
+        flex-basis: 31%;
+    }
+}
+/* End Media */

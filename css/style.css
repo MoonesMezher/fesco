@@ -1,0 +1,716 @@
+/* Start Components */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --main-color: #141723;
+    --text-color: #bf9e7b;
+    --font-family: 'Dancing Script', cursive;
+}
+
+body {
+    font-family: 'Cairo', 'sans-serif';
+}
+html {
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+section{
+    padding: 80px 40px;
+}
+footer  {
+    padding: 80px 40px 20px;
+}
+.container {
+    margin: 0 auto;
+    width: 90%;
+}
+.main-heading {
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 80px;
+}
+.main-heading h2 {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    font-family: 'Dancing Script', cursive;
+}
+.main-heading p {
+    font-size: .8rem;
+    margin-top: 15px;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+/* End Components */
+
+/* Start Header */
+header {
+    border-bottom: 1px solid white;
+    position: relative;
+    z-index: 10;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    width: 70px;
+    height: 58.3px;
+    cursor: pointer;
+}
+header img {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+header ul {
+    display: flex;
+    gap: 20px;
+}
+header li {
+    padding: 20px 0;
+    height: 58.3px;
+    overflow: hidden;
+    position: relative;
+}
+header li::before {
+    content: "";
+    position: absolute;
+    left: -100%;
+    opacity: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: var(--main-color);
+    width: 100%;
+    height: 2px;
+    transition: .7s ease;
+}
+header li:hover:before {
+    left: 0;
+    opacity: 1;
+}
+header a {
+    color: white;
+    text-transform: capitalize;
+    transition: .3s ease;
+}
+header a:hover {
+    color: var(--main-color);
+}
+/* End header */
+
+/* Start Home */
+.home {
+    background-image: url("../images/landing\ 4\ \(4\).jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: -1;
+    top: -60px;
+    height: 100vh;
+}
+.home .container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.home .description {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-basis: 50%;
+    justify-content: flex-start;
+    width: fit-content;
+}
+.home .description h2 {
+    color: var(--text-color);
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-family: 'Dancing Script', cursive;
+}
+.home .description img {
+    margin: 0 auto;
+}
+.home .description p {
+    color: black;
+    font-size: .9rem;
+    max-width: 400px;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+.home .description span {
+    color: white;
+    text-transform: capitalize;
+}
+/* End Home */
+
+/* Start About */
+.about {
+    background-color: white;
+    padding-bottom: 0px;
+    margin-bottom: -100px;
+}
+.about .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4%;
+}
+.about .about-us {
+    flex-basis: 48%;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+.about-us h2 {
+    color: var(--text-color);
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-family: 'Dancing Script', cursive;
+}
+.about .discreption {
+    flex-basis: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transform: translateY(-30%);
+}
+.about .discreption .contact,
+.about .discreption .image {
+    width: 70%;
+}
+.about .discreption .contact {
+    padding: 10px;
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    line-height: 1.6;
+}
+.cont h2 {
+    color: var(--text-color);
+    text-transform: capitalize;
+}
+.cont p {
+    color: white;
+}
+.contact p {
+    font-size: .8rem;
+}
+.contact h2 {
+    font-size: 1rem;
+}
+.contact .address h2 {
+    text-transform: uppercase;
+    color: white;
+}
+.contact .address p {
+    color: white;
+}
+.contact .address a {
+    color: var(--text-color);
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: .6rem;
+    transition: .5s ease;
+}
+.contact .address a:hover {
+    color: white;
+}
+.contact .opining-hours h2 {
+    text-transform: uppercase;
+    color: white;
+}
+.contact .opining-hours p,
+.contact .address p {
+    color: white;
+    text-transform: capitalize;
+}
+.contact .opining-hours p {
+    display: flex;
+    justify-content: space-between;
+}
+.contact button {
+    outline: none;
+    background-color: transparent;
+    width: 70%;
+    margin: 10px auto;
+}
+.contact button a {
+    color: white;
+    display: block;
+    text-transform: capitalize;
+    padding: 10px;
+    border: 1px solid var(--text-color);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: .5s ease;
+}
+.contact button a::before {
+    content: "";
+    position: absolute;
+    width: 101%;
+    height: 100%;
+    left: -101%;
+    top: 0;
+    background-color: var(--text-color);
+    transition: .5s ease;
+    z-index: -1;
+}
+.contact button a:hover:before {
+    left: 0;
+}
+.contact button a:hover {
+    color: var(--main-color);
+}
+.discreption .image {
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+.discreption .image img {
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+    position: relative;
+    z-index: -1;
+}
+.discreption .image .info {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    left: 0;
+    bottom: -100%;
+    z-index: 1;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--main-color);
+    transition: .3s ease;
+}
+.discreption .image .info h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: white;
+    font-family: var(--font-family);
+}
+.discreption .image .info h3 {
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+.discreption .image .info .icon {
+    display: flex;
+    margin-top: 5px;
+    gap: 10px;
+}
+.discreption .icon i {
+    font-size: 1.5rem;
+    color: gold;
+    transition: .3s ease;
+    cursor: pointer;
+}
+.discreption .icon i:hover {
+    transform: scale(1.1) rotate(6deg);
+}
+.discreption .icon i:last-child {
+    color: white;
+}
+.discreption .image:hover img {
+    transform: scale(1.1) rotate(5deg);
+    filter: grayscale(1);
+}
+.discreption .image:hover .info {
+    bottom: 0;
+}
+/* End About */
+
+/* Start Special */
+.special {
+    background-image: url("../images/landing.jpg");
+    background-size: cover;
+}
+.special .container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.special .box .image {
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+.special .box .image img {
+    transition: .5s ease;
+}
+.special .box .image::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 0;
+    height: 0;
+    background-color: rgb(20, 23, 35, 60%);
+    z-index: 3;
+    transition: .5s ease;
+}
+.special .box:hover .image::before {
+    height: 100%;
+    width: 100%;
+}
+.special .box:hover img {
+    transform: scale(1.1) rotate(6deg);
+}
+.special .box {
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    z-index: 0;
+}
+.special .box .name {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    text-transform: capitalize;
+    color: var(--text-color);
+    font-size: .5rem;
+    font-weight: bold;
+    transition: .5s ease;
+    z-index: 5;
+    font-family: var(--font-family);
+}
+.special .box:hover .name {
+    bottom: 50%;
+    font-size: 1.5rem;
+    transform: translate(-50%, -50%);
+}
+.special .box .info {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 15px 10px;
+    color: var(--text-color);
+    text-transform: capitalize;
+    position: relative;
+    z-index: 10;
+}
+.special .box .info p, 
+.special .box .info span {
+    transition: .3s ease;
+}
+.special .box .info p:hover, 
+.special .box .info span:hover  {
+    color: var(--main-color);
+}
+.special .main-heading h2 {
+    color: var(--text-color);
+}
+.special .main-heading p {
+    color: black;
+}
+/* End Special */
+
+/* Start Menu */
+.menu {
+    background-color: var(--main-color);
+} 
+.menu .main-heading h2 {
+    color: var(--text-color);
+}
+.menu .main-heading p {
+    color: white;
+}
+.menu .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.pizza,
+.dessert {
+    width: fit-content;
+    margin: 0 auto;
+}
+.pizza > h2,
+.dessert > h2 {
+    position: relative;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-family: var(--font-family);
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin: 20px 0;
+}
+.pizza .contain,
+.dessert .contain {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+.contain .col-one,
+.contain .col-two {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contain .box {
+    display: flex;
+    gap: 15px;
+    border-radius: 5px;
+    padding: 5px;
+    transition: .5s ease;
+}
+.contain .box .price {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    position: relative;
+    top: 50%;
+    transition: .5s ease;
+}
+.contain .box .info {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contain .box h2 {
+    font-size: 1rem;
+    font-family: var(--font-family);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.contain .box p {
+    font-size: .8rem;
+    line-height: 1.3;
+}
+.contain .box:hover {
+    background-color: darkgrey;
+}
+.contain .box:hover .price {
+    color: var(--main-color);
+}
+.menu button {
+    padding: 15px 25px;
+    background-color: var(--text-color);
+    width: fit-content;
+    margin: 20px auto 0;
+    border: 1px solid var(--text-color);
+    position: relative;
+    overflow: hidden;
+}
+.menu button::before {
+    content: "";
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    z-index: 0;
+    transition: .5s ease;
+}
+.menu button a {
+    text-transform: capitalize;
+    color: var(--main-color);
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    transition: .5s ease;
+}
+.menu button:hover:before {
+    left: 0;
+}
+.menu button:hover a {
+    color: var(--text-color);
+}
+/* End Menu */
+
+/* Start Book */
+.book {
+    background-image: url("../images/landing\ 4\ \(3\).jpg");
+    background-size: cover;
+    background-position: bottom;
+}
+.book .main-heading h2 {
+    color: white;
+}
+.book .main-heading p {
+    color: black;
+}
+.book form  {
+    width: 100%;
+}
+.book form .input {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px ,1fr));
+    gap: 20px;
+}
+.book form input {
+    width: 100%;
+    padding: 15px 10px;
+    border: none;
+    border-radius: 5px;
+}
+.book form input:focus {
+    outline: none;
+}
+.book form div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.book form label {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    font-family: var(--font-family);
+    margin-left: 4px;
+}
+.book input[type="submit"] {
+    padding: 15px 25px;
+    background-color: var(--text-color);
+    width: fit-content;
+    margin: 30px auto 0;
+    border: 1px solid var(--text-color);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    border-radius: 0;
+    transition: .5s ease;
+    cursor: pointer;
+}
+.book input[type="submit"]:hover {
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+/* End Book */
+
+/* start Footer */
+footer {
+    background-color: var(--main-color);
+}
+footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+footer .address,
+footer .social,
+footer .opining-hours {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: white;
+}
+footer a {
+    margin-top: 10px;
+    text-transform: capitalize;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 15px 40px;
+    border: 1px solid var(--text-color);
+    background-color: var(--main-color);
+    text-align: center;
+    width: fit-content;
+    transition: .5s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+footer a::before {
+    content: "";
+    position: absolute;
+    width: 101%;
+    height: 100%;
+    left: -101%;
+    top: 0;
+    background-color: var(--text-color);
+    transition: .5s ease;
+    z-index: -1;
+}
+footer a:hover:before{
+    left: 0;
+}
+footer a:hover {
+    color: var(--main-color);
+}
+footer .opining-hours h2,
+footer .social h2,
+footer .address h2 {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+footer .opining-hours p {
+    display: flex;
+    justify-content: space-between;
+}
+footer .icon {
+    display: flex;;
+    gap: 5px;
+}
+footer .icon i {
+    padding: 10px;
+    background-color: var(--main-color);
+    border: 1px solid var(--text-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    transition: .5s ease;
+    width: 40px;
+    cursor: pointer;
+}
+footer .icon i:first-child:hover {
+    background-color: #2196f3;
+}
+footer .icon i:nth-child(2):hover {
+    background-color: #67bafd;
+}
+footer .icon i:nth-child(3):hover {
+    background-color: green;
+}
+footer .icon i:last-child:hover {
+    background-color: red;
+}
+footer .copyright {
+    width: fit-content;
+    margin: 15px auto 0;
+    color: var(--text-color);
+    text-transform: capitalize;
+    display: flex;
+    font-size: 1.1rem;
+}
+/* End Footer */
